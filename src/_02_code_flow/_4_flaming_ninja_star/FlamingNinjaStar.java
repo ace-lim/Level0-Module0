@@ -10,34 +10,43 @@ public class FlamingNinjaStar {
 		int flameSize = 130;		//the length of the flaming arms
 		
 		// Make a new robot, and set it's pen down.
-
+		Robot Goku = new Robot();
+		Goku.penDown();
 		// Set the robot speed to 100
-		
+		Goku.setSpeed(100);
 		// Set the robot window size to 800 x 800
-
+		Goku.setWindowSize(800, 800);
 		//  COUNT. Make another int variable to count how many times the loop has repeated
 		//         Set its start value to zero.
-		
+		Goku.hide();
+		int count = 0;
 	       //  LOOP. Start a while loop to repeat all of the code below ONE time (we will change this later)
-
+		while (true) {
 			   // TURN RIGHT     Turn the robot 1/8 of a circle (hint: 360 degrees will turn a full circle)
-		
+		Goku.turn(360/8);
 			   // MOVE           Move the robot 64 pixels
-
+		Goku.move(64);
 			   // TURN LEFT      Turn the robot 40 degrees to the LEFT. (Negative numbers will turn the robot counter-clockwise.)
-			
+		Goku.turn(-40);
 			   // DRAW FLAME     Move the robot the distance in the variable flameSize
-			
+		Goku.setPenColor(255, 0, 255);
+		
+		Goku.move(flameSize);
+		
 				//               Turn the robot 170 degrees
-			
+		Goku.turn(170);	
 				//               Move the robot the distance in the variable flameSize (again)
-			
+		Goku.move(flameSize);
+		
+		Goku.setPenColor(255,255,255);
 			   // TURN RIGHT     Turn the robot 64 degrees to the right
-			
+		Goku.turn(64);
+		
 				// MOVE         Move the robot the distance in the variable baseSize
-		
+		Goku.move(baseSize);
 				//  INCREASE COUNT. Increase the count by 1
-		
+		count += 1;
+		}
 		//  End the while loop here
 		
 		// TEST   Run the program. Check that your shape is the same as the first picture in the recipe. 
@@ -45,7 +54,7 @@ public class FlamingNinjaStar {
 		
 		// COLOR  Change the Robot's pen color so that the flame is a different color to the rest of the star.
 		//        Run the program again. Check the second picture in the recipe.
-
+		
 		// LOOP   When you have one arm looking right, change your loop to repeat 25 times and run the program.
 		
 	}
