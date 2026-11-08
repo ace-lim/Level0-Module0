@@ -18,7 +18,7 @@ public class StarShow {
 		// but first you have to write some code. Find the drawStar() method and 
 		// write the code to draw a star.
 		drawStar(150);
-		
+		System.out.println("hello");
 		// Run the program. Check that your star is the same as the first picture in the recipe.
 		// Remove the drawStar(150) from the program before you proceed.
 		

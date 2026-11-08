@@ -1,5 +1,7 @@
 package _99_extra;
 
+import javax.swing.JOptionPane;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class SmartShapes {
@@ -17,18 +19,19 @@ bob.setSpeed(1000);
     	// COUNT. Create an int variable that will count how many sides of the shape we have drawn.
     	//        The start value will be zero because no sides have yet been drawn. Use this code:
 		  /**     int sides = 0;    **/
-    	int sides = 0;
-    	
+		int sides = 0;
+    	String ans = JOptionPane.showInputDialog("Insert any number");
+    	int side = Integer.parseInt(ans);
         // Start a while loop to repeat the MOVE, TURN, and COUNT code 4 times
-
-    	while (sides<10) {
+    	
+    	while (side>sides) {
 			
 		
         //         MOVE your robot 200 pixels
 bob.move(100);
 
         //         TURN the robot 90 degrees to the right
-    	bob.turn(36);
+    	bob.turn(360/side);
     	
     	//         COUNT. Add one to the number of sides the robot has drawn      sides+=1;
 sides+=1;
